@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Registration Form</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Enrollment Form</title>
+  </head>
+  <body>
     <div class="container">
-        <h1>Registration Form</h1>
-        <form id="registrationForm">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required><br>
+      <h1>Student Enrollment Form</h1>
+      <form id="enrollmentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br />
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+        <label for="portfolio">Portfolio Website:</label>
+        <input type="text" id="portfolio" name="portfolio" /><br />
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
+        <div class="div-gender">
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label><br />
+        </div>
 
-            <input type="submit" value="Register">
-        </form>
-        <div id="output"></div>
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" name="image" /><br />
+
+        <div class="div-skill">
+          <label for="skills">Skills:</label><br />
+          <input type="checkbox" id="html" name="skills" value="HTML" />
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" name="skills" value="CSS" />
+          <label for="css">CSS</label>
+          <input
+            type="checkbox"
+            id="javascript"
+            name="skills"
+            value="JavaScript"
+          />
+          <label for="javascript">JavaScript</label><br />
+        </div>
+
+        <button type="submit">Enroll Student</button>
+        <button type="button" id="clearButton">Clear</button>
+      </form>
+      <div id="output"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
